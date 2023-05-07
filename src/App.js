@@ -9,17 +9,22 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashbboard />} />
-        <Route
-          path="ClientCustomizationForm"
-          element={<ClientCustomizationForm />}
-        />
-        <Route path="SalesTeamDashboard" element={<SalesTeamDashboard />} />
-        <Route path="SupportTeamDashboard" element={<SupportTeamDashboard />} />
-        <Route
-          path="TechnicalTeamDashboard"
-          element={<TechnicalTeamDashboard />}
-        />
+        <Route path="/" element={<Dashbboard />}>
+          <Route
+            path="ClientCustomizationForm"
+            element={<ClientCustomizationForm />}
+          />
+          <Route path="SalesTeamDashboard" element={<SalesTeamDashboard />} />
+          <Route
+            path="SupportTeamDashboard"
+            element={<SupportTeamDashboard />}
+          />
+          <Route
+            path="TechnicalTeamDashboard"
+            element={<TechnicalTeamDashboard />}
+          />
+          <Route path="*" element={<h1>Not Found</h1>} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
