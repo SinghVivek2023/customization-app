@@ -81,7 +81,7 @@ export default function ClientCustomizationForm() {
             <FormErrorMessage>Password is required.</FormErrorMessage>
           )}
         </FormControl>
-        <FormControl isRequired>
+        <FormControl>
           <FormLabel>Remarks</FormLabel>
           <Textarea
             placeholder="Add organization(if any) details or any other remarks"
