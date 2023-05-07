@@ -9,6 +9,7 @@ import {
   FormHelperText,
   FormErrorMessage,
   Textarea,
+  Button,
 } from "@chakra-ui/react";
 
 const ClientCustomizationForm = () => {
@@ -41,15 +42,15 @@ const ClientCustomizationForm = () => {
         </FormControl>
         <FormControl isRequired>
           <FormLabel>School Name</FormLabel>
-          <Input type="Text" max={30} />
+          <Input type="Text" maxLength={30} />
         </FormControl>
         <FormControl isRequired>
           <FormLabel>Real School ID</FormLabel>
-          <Input type="Text" max={30} />
+          <Input type="Text" maxLength={30} />
         </FormControl>
         <FormControl isRequired>
           <FormLabel>Encoded School ID</FormLabel>
-          <Input type="Text" max={30} />
+          <Input type="Text" maxLength={30} />
         </FormControl>
         <FormControl isRequired isInvalid={isUsernameError}>
           <FormLabel>Username</FormLabel>
@@ -86,6 +87,7 @@ const ClientCustomizationForm = () => {
             name="remarks"
           />
         </FormControl>
+        <Button>Submit</Button>
       </Box>
     </>
   );
