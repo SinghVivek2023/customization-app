@@ -12,13 +12,14 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const ClientCustomizationForm = () => {
+export default function ClientCustomizationForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const handleUsernameChange = (e) => setUsername(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
   const isUsernameError = username === "";
   const isPasswordError = password === "";
+
   return (
     <>
       <Divider orientation="horizontal" h="2px" />
@@ -91,6 +92,4 @@ const ClientCustomizationForm = () => {
       </Box>
     </>
   );
-};
-
-export default ClientCustomizationForm;
+}
