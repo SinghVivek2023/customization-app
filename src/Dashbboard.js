@@ -1,17 +1,34 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Dashbboard() {
   return (
     <>
       <header>
-        <a href="#">Logo</a>
+        <NavLink to="#">Logo</NavLink>
         <nav>
           <ul>
-            <li>Dashbboard</li>
-            <li>Client Customization Form</li>
-            <li>Sales Team Dashboard</li>
-            <li>Support Team Dashboard</li>
-            <li>Technical Team Dashboard</li>
+            <li>
+              <NavLink to="/">Dashbboard</NavLink>
+            </li>
+            <li>
+              <NavLink to="/ClientCustomizationForm">
+                Client Customization Form
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/SalesteamDashboard">Sales Team Dashboard</NavLink>
+            </li>
+            <li>
+              <NavLink to="/SupportTeamDashboard">
+                Support Team Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/TechnicalTeamDashboard">
+                Technical Team Dashboard
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </header>
