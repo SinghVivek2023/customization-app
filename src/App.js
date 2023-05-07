@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
 import DashBoard from "./DashBoard";
 import ClientCustomizationForm from "./components/ClientCustomizationForm";
 import SalesTeamDashboard from "./components/SalesTeamDashboard";
