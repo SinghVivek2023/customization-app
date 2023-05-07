@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "../components/Header";
 
-const TechnicalTeamDashboard = () => {
+const SalesTeamDashboard = () => {
   return (
     <>
       <Header />
       <section>
-        <h1>Technical Team Dashboard</h1>
+        <h1>Sales Team Dashboard</h1>
       </section>
     </>
   );
 };
 
-export default TechnicalTeamDashboard;
+export default SalesTeamDashboard;

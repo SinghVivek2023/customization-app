@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Dashbboard from "./Dashbboard";
 import ClientCustomizationForm from "./components/ClientCustomizationForm";
-import SalesTeamDashbard from "./components/SalesTeamDashbard";
+import SalesTeamDashboard from "./components/SalesTeamDashboard";
 import SupportTeamDashboard from "./components/SupportTeamDashboard";
 import TechnicalTeamDashboard from "./components/TechnicalTeamDashboard";
 function App() {
@@ -14,7 +14,7 @@ function App() {
           path="ClientCustomizationForm"
           element={<ClientCustomizationForm />}
         />
-        <Route path="SalesTeamDashbard" element={<SalesTeamDashbard />} />
+        <Route path="SalesTeamDashboard" element={<SalesTeamDashboard />} />
         <Route path="SupportTeamDashboard" element={<SupportTeamDashboard />} />
         <Route
           path="TechnicalTeamDashboard"
