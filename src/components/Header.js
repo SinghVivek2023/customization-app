@@ -1,32 +1,51 @@
+import { List, ListItem, ListIcon } from "@chakra-ui/react";
+import {
+  CalendarIcon,
+  EditIcon,
+  QuestionOutlineIcon,
+  ViewIcon,
+  SettingsIcon,
+} from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
-      <NavLink to="#">Logo</NavLink>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/">DashBoard</NavLink>
-          </li>
-          <li>
+      <List color="white" fontSize="1.2em" spacing={4}>
+        <NavLink to="#">Logo</NavLink>
+        <nav>
+          <ListItem>
+            <NavLink to="/">
+              <ListIcon as={CalendarIcon} color="teal" />
+              DashBoard
+            </NavLink>
+          </ListItem>
+          <ListItem>
             <NavLink to="/ClientCustomizationForm">
+              <ListIcon as={EditIcon} color="teal" />
               Client Customization Form
             </NavLink>
-          </li>
-          <li>
-            <NavLink to="/SalesTeamDashboard">Sales Team Dashboard</NavLink>
-          </li>
-          <li>
-            <NavLink to="/SupportTeamDashboard">Support Team Dashboard</NavLink>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
+            <NavLink to="/SalesTeamDashboard">
+              <ListIcon as={QuestionOutlineIcon} color="teal" />
+              Sales Team Dashboard
+            </NavLink>
+          </ListItem>
+          <ListItem>
+            <NavLink to="/SupportTeamDashboard">
+              <ListIcon as={ViewIcon} color="teal" />
+              Support Team Dashboard
+            </NavLink>
+          </ListItem>
+          <ListItem>
             <NavLink to="/TechnicalTeamDashboard">
+              <ListIcon as={SettingsIcon} color="teal" />
               Technical Team Dashboard
             </NavLink>
-          </li>
-        </ul>
-      </nav>
+          </ListItem>
+        </nav>
+      </List>
     </header>
   );
 };
