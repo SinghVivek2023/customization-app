@@ -6,6 +6,7 @@ function Dashbboard() {
   return (
     <>
       <Header />
+      <h1>DashBoard</h1>
       <Outlet />
     </>
   );
