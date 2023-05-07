@@ -26,7 +26,7 @@ export default function ClientCustomizationForm() {
       <section>
         <h1>Client Customization Form</h1>
       </section>
-      <Box maxW="500px" mx="auto" color="#6dd5ed">
+      <Box maxW="500px" mx="auto" color="#6dd5ed" m={4}>
         <FormControl isRequired>
           <FormLabel>Channel Partner</FormLabel>
           <Select placeholder="Choose">
@@ -81,10 +81,18 @@ export default function ClientCustomizationForm() {
             <FormErrorMessage>Password is required.</FormErrorMessage>
           )}
         </FormControl>
+        <FormControl isRequired>
+          <FormLabel>Logo</FormLabel>
+          <label for="images" class="drop-container">
+            <span class="drop-title">Drop files here</span>
+            or
+            <input type="file" id="images" accept="image/*" required />
+          </label>
+        </FormControl>
         <FormControl>
           <FormLabel>Remarks</FormLabel>
           <Textarea
-            placeholder="Add organization(if any) details or any other remarks"
+            placeholder="Add organization (if any) details or any other remarks"
             name="remarks"
           />
         </FormControl>
