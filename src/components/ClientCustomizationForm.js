@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Box,
-  Divider,
   FormControl,
   FormLabel,
   Select,
@@ -22,40 +21,40 @@ export default function ClientCustomizationForm() {
 
   return (
     <>
-      <Divider orientation="horizontal" h="2px" />
       <section>
         <h1>Client Customization Form</h1>
       </section>
       <Box maxW="500px" mx="auto" color="#6dd5ed" m={4}>
         <FormControl isRequired>
           <FormLabel>Channel Partner</FormLabel>
-          <Select placeholder="Choose">
+          <Select placeholder="Choose" name="channel partner">
             <option>Schoollog</option>
             <option>Robo</option>
           </Select>
         </FormControl>
         <FormControl isRequired>
           <FormLabel>App Type</FormLabel>
-          <Select placeholder="Choose">
+          <Select placeholder="Choose" name="app type">
             <option>Parent App</option>
             <option>Student App</option>
           </Select>
         </FormControl>
         <FormControl isRequired>
           <FormLabel>School Name</FormLabel>
-          <Input type="Text" maxLength={30} />
+          <Input type="Text" maxLength={30} name="school name" />
         </FormControl>
         <FormControl isRequired>
           <FormLabel>Real School ID</FormLabel>
-          <Input type="Text" maxLength={30} />
+          <Input type="Text" maxLength={30} name="real school id" />
         </FormControl>
         <FormControl isRequired>
           <FormLabel>Encoded School ID</FormLabel>
-          <Input type="Text" maxLength={30} />
+          <Input type="Text" maxLength={30} name="encoded school id" />
         </FormControl>
         <FormControl isRequired isInvalid={isUsernameError}>
           <FormLabel>Username</FormLabel>
           <Input
+            name="username"
             placeholder="Username"
             max={30}
             value={username}
@@ -70,6 +69,7 @@ export default function ClientCustomizationForm() {
         <FormControl isRequired isInvalid={isPasswordError}>
           <FormLabel>Password</FormLabel>
           <Input
+            name="password"
             placeholder="Password"
             max={30}
             value={password}
@@ -86,7 +86,13 @@ export default function ClientCustomizationForm() {
           <label for="images" class="drop-container">
             <span class="drop-title">Drop files here</span>
             or
-            <input type="file" id="images" accept="image/*" required />
+            <input
+              type="file"
+              id="images"
+              accept="image/*"
+              required
+              name="logo"
+            />
           </label>
         </FormControl>
         <FormControl>
@@ -96,7 +102,7 @@ export default function ClientCustomizationForm() {
             name="remarks"
           />
         </FormControl>
-        <Button>Submit</Button>
+        <Button type="submit">Submit</Button>
       </Box>
     </>
   );
